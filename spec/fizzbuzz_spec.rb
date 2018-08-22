@@ -16,14 +16,18 @@ describe 'fizzbuzz' do
     it 'returns "fizzbuzz" when pass a multiple of both 3 and 5' do
         expect(fizzbuzz(15)).to eq 'fizzbuzz'
     end
-        it 'returns "number" when not pass a multiple of both 3 or 5' do
+    
+    it 'returns "number" when not pass a multiple of both 3 or 5' do
         expect(fizzbuzz(4)).to eq 4
     end
     
-        it 'requires number passed to be a whole number greater  than 0' do
-            expect(fizzbuzz(4.1)).to eq 'Invalid input, number must be a a whole number greater than 0'
-            expect(fizzbuzz(-2)).to eq 'Invalid input, number must be a a whole number greater than 0'
-            expect(fizzbuzz('word')).to eq 'Invalid input, number must be a a whole number greater than 0'
+    it 'requires number passed to be a whole number' do
+        expect(fizzbuzz(4.1)).to eq 'Invalid input, number must be a whole number'
+        expect(fizzbuzz('word')).to eq 'Invalid input, number must be a whole number'
+    end
+    
+    it 'returns 0 if number passed is 0' do
+        expect(fizzbuzz(0)).to eq 0
     end
 end
 
