@@ -11,10 +11,7 @@ def fizzbuzz(number)
         else
             number
         end
-    # elsif number == 0
-    #     'Invalid input, number cannot be equal to 0'
     else
         'Invalid input, number must be a whole number'
-        
     end
 end
